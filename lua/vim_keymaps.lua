@@ -7,6 +7,13 @@ local opts = { noremap = true, silent = true }
 keymap("n", "<leader>v", ":vsplit<CR>", opts)
 keymap("n", "<leader>s", ":split<CR>", opts)
 
+-- Select All
+keymap("n", "<leader>a", "ggVG", opts)
+
+-- Copy and Paste
+keymap("v", "<leader>y", '"+y', opts)
+keymap("v", "<C-v>", '"_dp', opts)
+
 -- Panes
 keymap("n", "<leader>h", "<C-w>h", opts)
 keymap("n", "<leader>j", "<C-w>j", opts)
@@ -39,12 +46,12 @@ keymap("i", "<C-h>", "<C-w>", { noremap = true })
 
 -- Normal mode toggle comment
 keymap("n", "<C-/>", function()
-  require("Comment.api").toggle.linewise.current()
+	require("Comment.api").toggle.linewise.current()
 end, { noremap = true, silent = true })
 
 -- Visual mode toggle comment
 keymap("v", "<C-/>", function()
-  local esc = vim.api.nvim_replace_termcodes("<ESC>", true, false, true)
-  vim.api.nvim_feedkeys(esc, "nx", false)
-  require("Comment.api").toggle.linewise(vim.fn.visualmode())
+	local esc = vim.api.nvim_replace_termcodes("<ESC>", true, false, true)
+	vim.api.nvim_feedkeys(esc, "nx", false)
+	require("Comment.api").toggle.linewise(vim.fn.visualmode())
 end, { noremap = true, silent = true })
