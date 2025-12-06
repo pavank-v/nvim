@@ -11,6 +11,7 @@ keymap("n", "<leader>s", ":split<CR>", opts)
 keymap("n", "<leader>a", "ggVG", opts)
 
 -- Copy and Paste
+keymap("n", "<leader>yy", '"+yy', opts)
 keymap("v", "<leader>y", '"+y', opts)
 keymap("v", "<C-v>", '"_dp', opts)
 
