@@ -8,12 +8,11 @@ keymap("n", "<leader>v", ":vsplit<CR>", opts)
 keymap("n", "<leader>s", ":split<CR>", opts)
 
 -- Select All
-keymap("n", "<leader>a", "ggVG", opts)
+keymap("n", "<leader>a", "<cmd>normal! ggVG<CR>", opts)
 
 -- Copy and Paste
 keymap("n", "<leader>yy", '"+yy', opts)
 keymap("v", "<leader>y", '"+y', opts)
-keymap("v", "<C-v>", '"_dp', opts)
 
 -- Panes
 keymap("n", "<leader>h", "<C-w>h", opts)
@@ -38,9 +37,6 @@ keymap("v", ">", ">gv", opts)
 -- Move selected lines
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
-
--- Toggle comment (needs nvim-comment or Comment.nvim)
-keymap("v", "<leader>c", ":CommentToggle<CR>", opts)
 
 keymap("i", "<C-BS>", "<C-w>", { noremap = true })
 keymap("i", "<C-h>", "<C-w>", { noremap = true })
