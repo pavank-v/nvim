@@ -26,7 +26,7 @@ return {
 				:find()
 		end
 
-		vim.keymap.set("n", "<leader>a", function()
+		vim.keymap.set("n", "<leader>n", function()
 			harpoon:list():add()
 		end)
 		vim.keymap.set("n", "<C-a>", function()

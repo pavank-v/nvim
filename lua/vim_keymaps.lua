@@ -8,7 +8,7 @@ keymap("n", "<leader>v", ":vsplit<CR>", opts)
 keymap("n", "<leader>s", ":split<CR>", opts)
 
 -- Select All
-keymap("n", "<leader>a", "<cmd>normal! ggVG<CR>", opts)
+keymap("n", "<leader>a", "ggVG", opts)
 
 -- Copy and Paste
 keymap("n", "<leader>yy", '"+yy', opts)
@@ -39,7 +39,6 @@ keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 keymap("i", "<C-BS>", "<C-w>", { noremap = true })
-keymap("i", "<C-h>", "<C-w>", { noremap = true })
 
 -- Normal mode toggle comment
 keymap("n", "<C-/>", function()
